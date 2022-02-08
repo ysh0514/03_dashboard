@@ -1,5 +1,6 @@
 import ModalStyle from 'assets/styles/ModalStyle';
 import { useState, useEffect } from 'react';
+import { MENU, COLOR_LOGO, GRAY_ICON } from 'assets/images';
 
 const {
   MenuIcon,
@@ -31,25 +32,18 @@ export default function Modal() {
 
   return (
     <>
-      <MenuIcon
-        onClick={toggleModal}
-        src="/images/menu.png"
-        alt="메뉴 아이콘"
-      />
+      <MenuIcon onClick={toggleModal} src={MENU} alt="메뉴 아이콘" />
       {modal && (
         <ModalBox>
           <Overlay onClick={toggleModal} />
           <ModalContent>
             <TopLogoBox>
-              <TopLogoImg
-                src="/images/ModalLogoImg.png"
-                alt="상단 로고 이미지"
-              />
+              <TopLogoImg src={COLOR_LOGO} alt="상단 로고 이미지" />
             </TopLogoBox>
             <ContentBox>
               <FirstMenuBox>
-                <LogoImg src="/images/Vector.png" alt="이미지" />
-                <MenuText>파트정밀가공</MenuText>
+                <LogoImg src={GRAY_ICON} alt="이미지" />
+                <MenuText>파트너정밀가공</MenuText>
               </FirstMenuBox>
               <LogOut>로그아웃</LogOut>
             </ContentBox>
