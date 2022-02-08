@@ -89,12 +89,6 @@ const Arrow = styled.img`
   height: 5px;
 `;
 
-const StatusText = styled.span`
-  font-size: 14px;
-  line-height: 20px;
-  margin-left: 16px;
-`;
-
 const CheckBoxContainer = styled.div`
   position: absolute;
   background: ${({ theme }) => theme.whiteColor};
@@ -144,7 +138,6 @@ const DashboardStyle = {
   SmallDropDown,
   DropDownTitle,
   Arrow,
-  StatusText,
   CheckBoxContainer,
   CheckBoxWrapper,
   CheckBox,
