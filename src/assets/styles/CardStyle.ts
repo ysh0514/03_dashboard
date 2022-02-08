@@ -10,6 +10,7 @@ const CardContainer = styled.div`
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.borderColor};
   border-radius: 4px;
+  margin-top: 32px;
   &:hover {
     border: 2px solid ${({ theme }) => theme.pointColor};
     padding: 23px 15px;
@@ -57,16 +58,10 @@ const Due = styled.span`
 `;
 
 const Border = styled.div`
-<<<<<<< HEAD
   background-color: ${({ theme }) => theme.borderColor};
   height: 1px;
   width: 100%;
   margin: 16px 0px;
-=======
-  border: 1px solid ${({ theme }) => theme.borderColor};
-  /* width: 334px; */
-  margin: 16px;
->>>>>>> cb8df1c6b57a55b922e4188eb3f260967d8a4fa7
 `;
 
 const InfoList = styled.ul`
