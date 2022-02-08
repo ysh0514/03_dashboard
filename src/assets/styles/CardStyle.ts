@@ -10,7 +10,6 @@ const CardContainer = styled.div`
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.borderColor};
   border-radius: 4px;
-  cursor: pointer;
   &:hover {
     border: 2px solid ${({ theme }) => theme.pointColor};
     padding: 23px 15px;
@@ -111,6 +110,7 @@ const BlueButton = styled.button`
   color: ${({ theme }) => theme.whiteColor};
   border-radius: 4px;
   margin-right: 14px;
+  cursor: pointer;
 `;
 
 const WhiteButton = styled.button`
@@ -121,6 +121,7 @@ const WhiteButton = styled.button`
   border: 1px solid ${({ theme }) => theme.pointColor};
   color: ${({ theme }) => theme.pointColor};
   border-radius: 4px;
+  cursor: pointer;
 `;
 
 const CardStyle = {
