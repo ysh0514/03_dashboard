@@ -108,12 +108,6 @@ const Arrow = styled.img`
   padding-right: 19px;
 `;
 
-const StatusText = styled.span`
-  font-size: 14px;
-  line-height: 20px;
-  margin-left: 16px;
-`;
-
 const CheckBoxContainer = styled.div`
   cursor: pointer;
   position: absolute;
@@ -168,7 +162,6 @@ const DashboardStyle = {
   SmallDropDown,
   DropDownTitle,
   Arrow,
-  StatusText,
   CheckBoxContainer,
   CheckBoxWrapper,
   CheckBox,
