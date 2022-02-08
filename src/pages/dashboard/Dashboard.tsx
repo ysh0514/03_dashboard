@@ -9,6 +9,16 @@ const ContentContainer = styled.div`
   margin: 0 auto;
   margin-top: 40px;
   width: 1130px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 0px;
+  }
+`;
+
+const Padding = styled.div`
+  @media screen and (max-width: 768px) {
+    padding: 24px 20px;
+  }
 `;
 
 const RequestText = styled.p`
@@ -34,14 +44,21 @@ const RequestContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 16px;
   grid-row-gap: 16px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+  }
 `;
 
 const RequestBox = styled.div`
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   padding: 24px 16px;
-  width: 366px;
   height: 356px;
+  @media screen and (max-width: 768px) {
+    height: 344px;
+  }
 `;
 
 const TopContentBox = styled.div`
@@ -97,10 +114,6 @@ const Date = styled.div``;
 // const ContentContainer = styled.div`
 
 // `;
-
-// const ContentContainer = styled.div`
-
-// `;
 export default function Dashboard() {
   type dataType = {
     id: number;
@@ -134,38 +147,38 @@ export default function Dashboard() {
   return (
     <>
       <Nav />
-      <ContentContainer>
-        <RequestText>들어온 요청</RequestText>
-        <RequestInfoText>
-          파트너님에게 딱 맞는 요청서를 찾아보세요.
-        </RequestInfoText>
-        <FilterContainer>
-          <ProcessingMethodBox text="가공방식" />
-          <ProcessingMethodBox text="재료" />
-        </FilterContainer>
-        <RequestContainer>
-          {dataaaa.map((ele, idx) => (
-            <RequestBox key={idx}>
-              <TopContentBox>
-                <RequestName>{ele.title}</RequestName>
-                {dataaaa[idx].status === '상담중' ? (
-                  <ConsultationTextBox>
-                    <ConsultationText>상담중</ConsultationText>
-                  </ConsultationTextBox>
-                ) : (
-                  <div />
-                )}
-              </TopContentBox>
-              <ClientName>{ele.client}</ClientName>
-              <Date>{ele.due}까지 납기</Date>
-              <InfoTextBox LeftText="도면개수" RightText={ele.count + '개'} />
-              <InfoTextBox LeftText="총 수량" RightText={ele.amount + '개'} />
-              <InfoTextBox LeftText="가공방식" RightText={ele.method} />
-              <InfoTextBox LeftText="재료" RightText={ele.material} />
-            </RequestBox>
-          ))}
-        </RequestContainer>
-      </ContentContainer>
+      <Padding>
+        <ContentContainer>
+          <RequestText>들어온 요청</RequestText>
+          <RequestInfoText>
+            파트너님에게 딱 맞는 요청서를 찾아보세요.
+          </RequestInfoText>
+          <FilterContainer>
+            <ProcessingMethodBox text="가공방식" />
+            <ProcessingMethodBox text="재료" />
+          </FilterContainer>
+          <RequestContainer>
+            {dataaaa.map((ele, idx) => (
+              <RequestBox key={idx}>
+                <TopContentBox>
+                  <RequestName>{ele.title}</RequestName>
+                  {dataaaa[idx].status === '상담중' && (
+                    <ConsultationTextBox>
+                      <ConsultationText>상담중</ConsultationText>
+                    </ConsultationTextBox>
+                  )}
+                </TopContentBox>
+                <ClientName>{ele.client}</ClientName>
+                <Date>{ele.due}까지 납기</Date>
+                <InfoTextBox LeftText="도면개수" RightText={ele.count + '개'} />
+                <InfoTextBox LeftText="총 수량" RightText={ele.amount + '개'} />
+                <InfoTextBox LeftText="가공방식" RightText={ele.method} />
+                <InfoTextBox LeftText="재료" RightText={ele.material} />
+              </RequestBox>
+            ))}
+          </RequestContainer>
+        </ContentContainer>
+      </Padding>
     </>
   );
 }

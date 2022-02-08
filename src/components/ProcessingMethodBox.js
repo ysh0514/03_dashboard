@@ -5,7 +5,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-right: 8px;
-  width: 98px;
   height: 32px;
   border: 1px solid gray;
   border-radius: 4px;
@@ -13,6 +12,7 @@ const Container = styled.div`
 
 const ProcessingMethodText = styled.p`
   margin-left: 12px;
+  margin-right: 12px;
   font-size: 12px;
 `;
 
