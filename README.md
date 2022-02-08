@@ -55,8 +55,9 @@ src
  ┣ App.tsx             
  ┗ index.tsx      
  
+## 개발 진행 상황 공유
+    ![notion](https://user-images.githubusercontent.com/91244500/153042906-aea5cd52-d714-480d-8745-cc4b30e07f76.jpg)
 
-    
 ## 📝 기능
 
 ### 대시보드 페이지 HTML 구조 작업
