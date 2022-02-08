@@ -1,5 +1,5 @@
 import { IRequestInfoProps } from '../hooks';
-import { CardStyle } from 'assets/styles';
+import { CardStyle } from '../assets/styles';
 
 interface Props {
   data: IRequestInfoProps;

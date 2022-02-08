@@ -52,9 +52,6 @@ button {
 	padding: 0;
 	font-family: inherit;
 }
-body{
-	font-family: font-family: 'Noto Sans KR', sans-serif;
-}
 `;
 
 export default GlobalStyle;

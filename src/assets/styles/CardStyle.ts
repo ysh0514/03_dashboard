@@ -10,7 +10,7 @@ const CardContainer = styled.div`
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.borderColor};
   border-radius: 4px;
-  margin-top: 32px;
+  cursor: pointer;
   &:hover {
     border: 2px solid ${({ theme }) => theme.pointColor};
     padding: 23px 15px;
