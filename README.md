@@ -56,7 +56,8 @@ src
  ┗ index.tsx      
  
 ## 📋개발 진행 상황 공유
-![notion](https://user-images.githubusercontent.com/91244500/153042906-aea5cd52-d714-480d-8745-cc4b30e07f76.jpg)
+<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
+
 
 ## 📝 기능
 
