@@ -3,19 +3,15 @@ import { useRequestApi, IRequestInfoProps } from 'hooks';
 import { ARROW, LOGO, WHITE_ICON } from 'assets/images';
 import { DashboardStyle } from 'assets/styles';
 import { Card, Material, Menu, Method, Toggle } from 'components';
+import Nav from 'components/Nav';
 
 const {
   Container,
-  Header,
-  Logo,
-  SubMenu,
-  Icon,
-  MenuTitle,
-  Bar,
   Title,
   SubTitle,
   DropDownWrapper,
   InnerFlex,
+  RightInnerFlex,
   BigDropDown,
   SmallDropDown,
   DropDownTitle,
@@ -106,7 +102,7 @@ export default function Dashboard() {
   }, [material]);
 
   useEffect(() => {
-    console.log(isClick);
+
     if (isClick) {
       setParams({
         ...params,
@@ -151,17 +147,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <Header>
-        <button onClick={menuButtonClick}>
-          <Logo src={LOGO} alt="로고" />
-        </button>
-        <SubMenu>
-          <Icon src={WHITE_ICON} alt="건물 이미지" />
-          <MenuTitle>A 가공 업체</MenuTitle>
-          <Bar />
-          <MenuTitle>로그아웃</MenuTitle>
-        </SubMenu>
-      </Header>
+      <Nav />
       <Container>
         <Title>들어온 요청</Title>
         <SubTitle>파트너님에게 딱 맞는 요청서를 찾아보세요.</SubTitle>
@@ -177,9 +163,12 @@ export default function Dashboard() {
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </SmallDropDown>
           </InnerFlex>
-          <InnerFlex>
+
+          <RightInnerFlex>
             <Toggle toggleClick={toggleClick} />
-          </InnerFlex>
+            <StatusText>상담 중인 요청만 보기</StatusText>
+          </RightInnerFlex>
+
         </DropDownWrapper>
         {showMethod && (
           <CheckBoxContainer>

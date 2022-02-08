@@ -4,7 +4,6 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 366px;
   height: 356px;
   padding: 24px 16px;
   background: ${({ theme }) => theme.whiteColor};
@@ -12,6 +11,9 @@ const CardContainer = styled.div`
   border-radius: 4px;
   &:hover {
     border: 2px solid ${({ theme }) => theme.pointColor};
+  }
+  @media screen and (max-width: 768px) {
+    height: 344px;
   }
 `;
 
@@ -52,7 +54,7 @@ const Due = styled.span`
 
 const Border = styled.div`
   border: 1px solid ${({ theme }) => theme.borderColor};
-  width: 334px;
+  /* width: 334px; */
   margin: 16px;
 `;
 
