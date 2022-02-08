@@ -1,5 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
+
+interface Iprops {
+  toggleClick: () => void;
+}
 
 const Container = styled.div`
   position: relative;
@@ -66,11 +69,17 @@ const Consultation = styled.span`
   color: #323d45;
 `;
 
-export function Toggle() {
+export function Toggle({ toggleClick }: Iprops) {
   return (
     <Container>
       <CheckboxContainer>
-        <Input id="checkbox" type="checkbox" name="status" value="상담중" />
+        <Input
+          id="checkbox"
+          type="checkbox"
+          name="status"
+          value="상담중"
+          onClick={toggleClick}
+        />
         <CheckboxLabel htmlFor="checkbox" />
       </CheckboxContainer>
       <Consultation>상담중인 요청만 보기</Consultation>
