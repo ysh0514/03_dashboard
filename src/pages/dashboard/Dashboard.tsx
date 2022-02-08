@@ -16,7 +16,6 @@ const {
   SmallDropDown,
   DropDownTitle,
   Arrow,
-  StatusText,
   CheckBoxContainer,
   CheckBoxWrapper,
   CheckBox,
@@ -102,7 +101,6 @@ export default function Dashboard() {
   }, [material]);
 
   useEffect(() => {
-
     if (isClick) {
       setParams({
         ...params,
@@ -166,9 +164,7 @@ export default function Dashboard() {
 
           <RightInnerFlex>
             <Toggle toggleClick={toggleClick} />
-            <StatusText>상담 중인 요청만 보기</StatusText>
           </RightInnerFlex>
-
         </DropDownWrapper>
         {showMethod && (
           <CheckBoxContainer>
