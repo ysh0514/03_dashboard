@@ -99,6 +99,7 @@ const DropDownTitle = styled.span`
   top: calc(50% - 14px / 2);
   font-family: Roboto;
   font-size: 12px;
+  font-weight: 500;
   line-height: 14px;
 `;
 
