@@ -140,7 +140,7 @@ export default function Dashboard() {
     setShowMenu((curr) => !curr);
   };
 
-  const clickToggle = () => {
+  const toggleClick = () => {
     setIsClick(!isClick);
   };
 
@@ -157,13 +157,18 @@ export default function Dashboard() {
               <DropDownTitle>가공방식</DropDownTitle>
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </BigDropDown>
-            <SmallDropDown onClick={materialClick}>
-              <DropDownTitle>재료</DropDownTitle>
+            <SmallDropDown
+              onClick={materialClick}
+              style={material.length !== 0 ? { width: '92px' } : {}}
+            >
+              <DropDownTitle>
+                재료{material.length !== 0 && `(${material.length})`}
+              </DropDownTitle>
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </SmallDropDown>
           </InnerFlex>
           <RightInnerFlex>
-            <Toggle clickToggle={clickToggle} isClick={isClick} />
+            <Toggle toggleClick={toggleClick} />
             <StatusText>상담 중인 요청만 보기</StatusText>
           </RightInnerFlex>
         </DropDownWrapper>
