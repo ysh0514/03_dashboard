@@ -34,6 +34,7 @@ const DropDownWrapper = styled.form`
   margin: 32px 0 4px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
 

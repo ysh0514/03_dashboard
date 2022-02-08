@@ -2,7 +2,14 @@ import { useEffect, useState } from 'react';
 import { useRequestApi, IRequestInfoProps } from '../../hooks';
 import { ARROW, LOGO, REFRESH, WHITE_ICON } from '../../assets/images';
 import { DashboardStyle } from '../../assets/styles';
-import { Card, Material, Menu, Method, Toggle } from '../../components';
+import {
+  Card,
+  Material,
+  Menu,
+  Method,
+  NoResults,
+  Toggle,
+} from '../../components';
 import Nav from '../../components/Nav';
 
 const {
@@ -152,7 +159,7 @@ export default function Dashboard() {
   const toggleClick = () => {
     setIsClick(!isClick);
   };
-
+  console.log(data);
   return (
     <>
       <Nav />
@@ -232,6 +239,7 @@ export default function Dashboard() {
             <Card key={data.id} data={data} />
           ))}
         </Grid>
+        {data.length === 0 && <NoResults />}
         {showMenu && <Menu />}
       </Container>
     </>
