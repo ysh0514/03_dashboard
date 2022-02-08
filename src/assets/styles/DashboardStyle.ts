@@ -4,6 +4,7 @@ const Container = styled.div`
   margin: 80px 80px;
   margin: 0 auto;
   max-width: 1130px;
+
   @media screen and (max-width: 768px) {
     margin: 0 20px;
   }
@@ -28,15 +29,18 @@ const DropDownWrapper = styled.form`
   width: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  align-items: center;
   justify-content: space-between;
   margin: 32px 0 4px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
 const InnerFlex = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const RightInnerFlex = styled.div`
@@ -69,7 +73,7 @@ const SmallDropDown = styled.div<{ Back: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px 12px;
+  padding: 9px 12px;
   color: ${({ Back }) => (Back ? 'white' : '#323D45')};
   background-color: ${({ Back }) => (Back ? '#1565C0' : 'white')};
   border: 1px solid ${({ theme }) => theme.grayColor};
@@ -81,8 +85,12 @@ const SmallDropDown = styled.div<{ Back: boolean }>`
 `;
 
 const FilterReset = styled.div`
-  font-size: 20px;
-  margin-left: 16px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
   color: #2196f3;
   margin-top: 8px;
   cursor: pointer;
@@ -92,6 +100,7 @@ const DropDownTitle = styled.span`
   top: calc(50% - 14px / 2);
   font-family: Roboto;
   font-size: 12px;
+  font-weight: 500;
   line-height: 14px;
 `;
 

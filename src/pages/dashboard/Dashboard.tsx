@@ -2,7 +2,14 @@ import { useEffect, useState } from 'react';
 import { useRequestApi, IRequestInfoProps } from '../../hooks';
 import { ARROW, LOGO, REFRESH, WHITE_ICON } from '../../assets/images';
 import { DashboardStyle } from '../../assets/styles';
-import { Card, Material, Menu, Method, Toggle } from '../../components';
+import {
+  Card,
+  Material,
+  Menu,
+  Method,
+  NoResults,
+  Toggle,
+} from '../../components';
 import Nav from '../../components/Nav';
 
 const {
@@ -152,7 +159,7 @@ export default function Dashboard() {
   const toggleClick = () => {
     setIsClick(!isClick);
   };
-
+  console.log(data);
   return (
     <>
       <Nav />
@@ -181,10 +188,12 @@ export default function Dashboard() {
 
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </SmallDropDown>
-            <FilterReset onClick={isRefreshClick}>
-              <Img src={REFRESH} />
-              필터링 리셋
-            </FilterReset>
+            {(material.length > 0 || method.length > 0) && (
+              <FilterReset onClick={isRefreshClick}>
+                <Img src={REFRESH} />
+                필터링 리셋
+              </FilterReset>
+            )}
           </InnerFlex>
           <RightInnerFlex>
             <Toggle toggleClick={toggleClick} />
@@ -230,6 +239,7 @@ export default function Dashboard() {
             <Card key={data.id} data={data} />
           ))}
         </Grid>
+        {data.length === 0 && <NoResults />}
         {showMenu && <Menu />}
       </Container>
     </>
