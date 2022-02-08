@@ -45,81 +45,81 @@ export default function Dashboard() {
   const apiParams = { url: '/requests', method: 'GET', params: {} };
   const { response, onApiRequest } = useRequestApi(apiParams);
 
-  // function onChangeMethod(i: number) {
-  //   if (method.includes(i)) {
-  //     const arr = method.filter((e) => e !== i);
-  //     arr.sort();
-  //     setMethod(arr);
-  //   } else {
-  //     const arr = [...method];
-  //     arr.push(i);
-  //     arr.sort();
-  //     setMethod(arr);
-  //   }
-  // }
+  function onChangeMethod(i: number) {
+    if (method.includes(i)) {
+      const arr = method.filter((e) => e !== i);
+      arr.sort();
+      setMethod(arr);
+    } else {
+      const arr = [...method];
+      arr.push(i);
+      arr.sort();
+      setMethod(arr);
+    }
+  }
 
-  // function onChangeMaterial(i: number) {
-  //   if (material.includes(i)) {
-  //     const arr = material.filter((e) => e !== i);
-  //     arr.sort();
-  //     setMaterial(arr);
-  //   } else {
-  //     const arr = [...material];
-  //     arr.push(i);
-  //     arr.sort();
-  //     setMaterial(arr);
-  //   }
-  // }
+  function onChangeMaterial(i: number) {
+    if (material.includes(i)) {
+      const arr = material.filter((e) => e !== i);
+      arr.sort();
+      setMaterial(arr);
+    } else {
+      const arr = [...material];
+      arr.push(i);
+      arr.sort();
+      setMaterial(arr);
+    }
+  }
 
-  // useEffect(() => {
-  //   if (method.length) {
-  //     const temp = [];
-  //     for (let el of method) {
-  //       temp.push(Method[el]);
-  //     }
-  //     const param = temp.toString();
-  //     setParams({
-  //       ...params,
-  //       method: param,
-  //     });
-  //   } else {
-  //     delete params.method;
-  //     setParams({ ...params });
-  //   }
-  // }, [method]);
+  useEffect(() => {
+    if (method.length) {
+      const temp = [];
+      for (let el of method) {
+        temp.push(Method[el]);
+      }
+      const param = temp.toString();
+      setParams({
+        ...params,
+        method: param,
+      });
+    } else {
+      delete params.method;
+      setParams({ ...params });
+    }
+  }, [method]);
 
-  // useEffect(() => {
-  //   if (material.length) {
-  //     const temp = [];
-  //     for (let el of material) {
-  //       temp.push(Material[el]);
-  //     }
-  //     const param = temp.toString();
-  //     setParams({
-  //       ...params,
-  //       material: param,
-  //     });
-  //   } else {
-  //     delete params.material;
-  //     setParams({ ...params });
-  //   }
-  // }, [material]);
+  useEffect(() => {
+    if (material.length) {
+      const temp = [];
+      for (let el of material) {
+        temp.push(Material[el]);
+      }
+      const param = temp.toString();
+      setParams({
+        ...params,
+        material: param,
+      });
+    } else {
+      delete params.material;
+      setParams({ ...params });
+    }
+  }, [material]);
 
-  // useEffect(() => {
-  //   if (isClick) {
-  //     setParams({
-  //       ...params,
-  //       status: '상담중',
-  //     });
-  //   } else {
-  //     delete params.status;
-  //     setParams({ ...params });
-  //   }
-  // }, [isClick]);
+  useEffect(() => {
+    if (isClick) {
+      setParams({
+        ...params,
+        status: '상담중',
+      });
+    } else {
+      delete params.status;
+      setParams({ ...params });
+    }
+  }, [isClick]);
 
-  // useEffect(() => {
-  //   onApiRequest({ ...apiParams, params });
-  // }, [params]);
+  useEffect(() => {
+    onApiRequest({ ...apiParams, params });
+  }, [params]);
 
   useEffect(() => {
     if (!response) return;
@@ -142,10 +142,6 @@ export default function Dashboard() {
 
   const menuButtonClick = () => {
     setShowMenu((curr) => !curr);
-  };
-
-  const clickToggle = () => {
-    setIsClick(!isClick);
   };
 
   return (
@@ -177,8 +173,7 @@ export default function Dashboard() {
             </SmallDropDown>
           </InnerFlex>
           <InnerFlex>
-            <Toggle clickToggle={clickToggle} isClick={isClick} />
-            <StatusText>상담 중인 요청만 보기</StatusText>
+            <Toggle />
           </InnerFlex>
         </DropDownWrapper>
         {showMethod && (
@@ -190,7 +185,7 @@ export default function Dashboard() {
                   id="scales"
                   name="scales"
                   defaultChecked={method.includes(i)}
-                  // onClick={() => onChangeMethod(i)}
+                  onClick={() => onChangeMethod(i)}
                 />
                 <label htmlFor="scales">{e}</label>
               </CheckBoxWrapper>
@@ -206,9 +201,9 @@ export default function Dashboard() {
                   id="scales"
                   name="scales"
                   defaultChecked={material.includes(i)}
-                  // onClick={() => {
-                  //   onChangeMaterial(i);
-                  // }}
+                  onClick={() => {
+                    onChangeMaterial(i);
+                  }}
                 />
                 <label htmlFor="scales">{e}</label>
               </CheckBoxWrapper>
