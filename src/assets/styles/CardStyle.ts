@@ -5,8 +5,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 356px;
-  min-width: 366px;
+  height: 356px;
   padding: 24px 16px;
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.borderColor};
@@ -14,6 +13,9 @@ const CardContainer = styled.div`
   &:hover {
     border: 2px solid ${({ theme }) => theme.pointColor};
     padding: 23px 15px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 344px;
   }
 `;
 
@@ -55,10 +57,16 @@ const Due = styled.span`
 `;
 
 const Border = styled.div`
+<<<<<<< HEAD
   background-color: ${({ theme }) => theme.borderColor};
   height: 1px;
   width: 100%;
   margin: 16px 0px;
+=======
+  border: 1px solid ${({ theme }) => theme.borderColor};
+  /* width: 334px; */
+  margin: 16px;
+>>>>>>> cb8df1c6b57a55b922e4188eb3f260967d8a4fa7
 `;
 
 const InfoList = styled.ul`
