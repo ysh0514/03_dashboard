@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin: 0 80px;
+  margin: 80px 80px;
   margin: 0 auto;
   max-width: 1130px;
   @media screen and (max-width: 768px) {
@@ -10,8 +10,8 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   font-size: 20px;
-  font-weight: 900;
   line-height: 32px;
+  font-weight: bold;
   margin-top: 40px;
   @media screen and (max-width: 768px) {
     margin-top: 20px;
@@ -25,6 +25,9 @@ const SubTitle = styled.h2`
 
 const DropDownWrapper = styled.form`
   display: flex;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   justify-content: space-between;
   margin: 32px 0 4px;
   @media screen and (max-width: 768px) {
@@ -43,15 +46,32 @@ const RightInnerFlex = styled.div`
   }
 `;
 
-const BigDropDown = styled.div`
+const BigDropDown = styled.div<{ Back: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-right: 8px;
+  padding: 9px 12px;
+  background-color: ${({ Back }) => (Back ? '#1565C0' : 'white')};
+  border: 1px solid ${({ theme }) => theme.grayColor};
+  color: ${({ Back }) => (Back ? 'white' : '#323D45')};
+  box-sizing: border-box;
+  border-radius: 4px;
+  min-width: 98px;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.pointColor};
+  }
+`;
+
+const SmallDropDown = styled.div<{ Back: boolean }>`
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 4px 12px;
-  width: 98px;
-  height: 32px;
-  background: ${({ theme }) => theme.whiteColor};
+  color: ${({ Back }) => (Back ? 'white' : '#323D45')};
+  background-color: ${({ Back }) => (Back ? '#1565C0' : 'white')};
   border: 1px solid ${({ theme }) => theme.grayColor};
   box-sizing: border-box;
   border-radius: 4px;
@@ -60,20 +80,12 @@ const BigDropDown = styled.div`
   }
 `;
 
-const SmallDropDown = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 4px 12px;
-  width: 76px;
-  height: 32px;
-  background: ${({ theme }) => theme.whiteColor};
-  border: 1px solid ${({ theme }) => theme.grayColor};
-  box-sizing: border-box;
-  border-radius: 4px;
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.pointColor};
-  }
+const FilterReset = styled.div`
+  font-size: 20px;
+  margin-left: 16px;
+  color: #2196f3;
+  margin-top: 8px;
+  cursor: pointer;
 `;
 
 const DropDownTitle = styled.span`
@@ -81,15 +93,23 @@ const DropDownTitle = styled.span`
   font-family: Roboto;
   font-size: 12px;
   line-height: 14px;
-  margin-right: 12px;
 `;
+
+const Img = styled.img`
+  margin-right: 12px;
+  height: 16px;
+`;
+const DropDownCount = styled.span``;
 
 const Arrow = styled.img`
   width: 10px;
   height: 5px;
+  padding-left: 12px;
+  padding-right: 19px;
 `;
 
 const CheckBoxContainer = styled.div`
+  cursor: pointer;
   position: absolute;
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.grayColor};
@@ -109,6 +129,7 @@ const CheckBoxWrapper = styled.div`
 `;
 
 const CheckBox = styled.input`
+  cursor: pointer;
   width: 18px;
   height: 18px;
   margin-right: 10px;
@@ -118,6 +139,7 @@ const CheckBox = styled.input`
 
 const Grid = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   /* place-items: center; */
@@ -132,7 +154,9 @@ const DashboardStyle = {
   Title,
   SubTitle,
   DropDownWrapper,
+  DropDownCount,
   InnerFlex,
+  Img,
   RightInnerFlex,
   BigDropDown,
   SmallDropDown,
@@ -141,6 +165,7 @@ const DashboardStyle = {
   CheckBoxContainer,
   CheckBoxWrapper,
   CheckBox,
+  FilterReset,
   Grid,
 };
 

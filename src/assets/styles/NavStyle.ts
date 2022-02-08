@@ -38,6 +38,7 @@ const RightLogoBox = styled.div`
 
 const IconAndText = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const CompanyIcon = styled.img`
@@ -61,6 +62,7 @@ const LogOutText = styled.p`
   font-weight: 500;
   line-height: 20px;
   color: white;
+  cursor: pointer;
 `;
 
 const NavStyle = {

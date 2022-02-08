@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useRequestApi, IRequestInfoProps } from 'hooks';
-import { ARROW, LOGO, WHITE_ICON } from 'assets/images';
-import { DashboardStyle } from 'assets/styles';
-import { Card, Material, Menu, Method, Toggle } from 'components';
-import Nav from 'components/Nav';
+import { useRequestApi, IRequestInfoProps } from '../../hooks';
+import { ARROW, LOGO, REFRESH, WHITE_ICON } from '../../assets/images';
+import { DashboardStyle } from '../../assets/styles';
+import { Card, Material, Menu, Method, Toggle } from '../../components';
+import Nav from '../../components/Nav';
 
 const {
   Container,
@@ -16,9 +16,12 @@ const {
   SmallDropDown,
   DropDownTitle,
   Arrow,
+  DropDownCount,
   CheckBoxContainer,
+  FilterReset,
   CheckBoxWrapper,
   CheckBox,
+  Img,
   Grid,
 } = DashboardStyle;
 
@@ -139,6 +142,13 @@ export default function Dashboard() {
     setShowMenu((curr) => !curr);
   };
 
+  const isRefreshClick = () => {
+    setMethod([]);
+    setMaterial([]);
+    setShowMaterial(false);
+    setShowMethod(false);
+  };
+
   const toggleClick = () => {
     setIsClick(!isClick);
   };
@@ -152,19 +162,29 @@ export default function Dashboard() {
 
         <DropDownWrapper>
           <InnerFlex>
-            <BigDropDown onClick={methodClick}>
-              <DropDownTitle>가공방식</DropDownTitle>
-              <Arrow src={ARROW} alt="드롭 다운 화살표" />
-            </BigDropDown>
-            <SmallDropDown
-              onClick={materialClick}
-              style={material.length !== 0 ? { width: '92px' } : {}}
-            >
+            <BigDropDown Back={method.length > 0} onClick={methodClick}>
               <DropDownTitle>
-                재료{material.length !== 0 && `(${material.length})`}
+                가공방식
+                {method.length > 0 && (
+                  <DropDownCount>({method.length})</DropDownCount>
+                )}
               </DropDownTitle>
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
+            </BigDropDown>
+            <SmallDropDown Back={material.length > 0} onClick={materialClick}>
+              <DropDownTitle>
+                재료
+                {material.length > 0 && (
+                  <DropDownCount>({material.length})</DropDownCount>
+                )}
+              </DropDownTitle>
+
+              <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </SmallDropDown>
+            <FilterReset onClick={isRefreshClick}>
+              <Img src={REFRESH} />
+              필터링 리셋
+            </FilterReset>
           </InnerFlex>
           <RightInnerFlex>
             <Toggle toggleClick={toggleClick} />

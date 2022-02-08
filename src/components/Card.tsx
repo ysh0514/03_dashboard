@@ -1,5 +1,5 @@
 import { IRequestInfoProps } from '../hooks';
-import { CardStyle } from 'assets/styles';
+import { CardStyle } from '../assets/styles';
 
 interface Props {
   data: IRequestInfoProps;
@@ -12,6 +12,7 @@ const {
   Status,
   Client,
   Due,
+  InfoTitle,
   Border,
   InfoList,
   InfoItem,
@@ -32,19 +33,19 @@ export const Card: React.FC<Props> = ({ data }) => {
       <Border />
       <InfoList>
         <InfoItem>
-          도면 개수
+          <InfoTitle>도면 개수</InfoTitle>
           <span>{data.count}개</span>
         </InfoItem>
         <InfoItem>
-          총 수량
+          <InfoTitle>총 수량</InfoTitle>
           <span>{data.amount}개</span>
         </InfoItem>
         <InfoItem>
-          가공 방식
+          <InfoTitle>가공 방식</InfoTitle>
           <div>{data.method.toString()}</div>
         </InfoItem>
         <InfoItem>
-          재료
+          <InfoTitle>재료</InfoTitle>
           <div>{data.material.toString()}</div>
         </InfoItem>
       </InfoList>
