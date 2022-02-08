@@ -46,7 +46,6 @@ const BigDropDown = styled.div<{ Back: boolean }>`
   flex-direction: row;
   align-items: center;
   margin-right: 8px;
-  padding: 9px 12px;
   background-color: ${({ Back }) => (Back ? '#1565C0' : 'white')};
   border: 1px solid ${({ theme }) => theme.grayColor};
   color: ${({ Back }) => (Back ? 'white' : '#323D45')};
@@ -64,7 +63,6 @@ const SmallDropDown = styled.div<{ Back: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 9px 12px;
   color: ${({ Back }) => (Back ? 'white' : '#323D45')};
   background-color: ${({ Back }) => (Back ? '#1565C0' : 'white')};
   border: 1px solid ${({ theme }) => theme.grayColor};
@@ -93,6 +91,8 @@ const DropDownTitle = styled.span`
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
+  margin: 9px 12px;
+  margin-right: 0px;
 `;
 
 const Img = styled.img`
@@ -105,7 +105,7 @@ const Arrow = styled.img`
   width: 10px;
   height: 5px;
   padding-left: 12px;
-  padding-right: 19px;
+  padding-right: 13.5px;
 `;
 
 const CheckBoxContainer = styled.div`
