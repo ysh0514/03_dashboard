@@ -11,7 +11,7 @@ const CardContainer = styled.div`
   border: 1px solid ${({ theme }) => theme.borderColor};
   border-radius: 4px;
   &:hover {
-    border: 2px solid ${({ theme }) => theme.pointColor};
+    border: 1px solid ${({ theme }) => theme.pointColor};
   }
 `;
 
