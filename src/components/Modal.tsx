@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const MenuIcon = styled.img`
@@ -47,20 +47,35 @@ const TopLogoBox = styled.div`
 const TopLogoImg = styled.img`
   width: 92px;
   height: 12px;
-  margin: 16px 20px;
+  margin: 16px 20px 11px 20px;
 `;
 
 const ContentBox = styled.div`
   padding: 36px 32px;
 `;
 
-const LogoImg = styled.div``;
+const LogoImg = styled.img`
+  width: 15px;
+  height: 15px;
+`;
 
-const FirstMenuBox = styled.div``;
+const FirstMenuBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-const MenuText = styled.div``;
+const MenuText = styled.p`
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 8px;
+`;
 
-const LogOut = styled.div``;
+const LogOut = styled.div`
+  margin-top: 24px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+`;
 
 export default function Modal() {
   const [modal, setModal] = useState(false);
@@ -76,10 +91,8 @@ export default function Modal() {
     setModal(!modal);
   };
 
-  console.log(modal);
-
   return (
-    <div>
+    <>
       <MenuIcon
         onClick={toggleModal}
         src="/images/menu.png"
@@ -97,7 +110,7 @@ export default function Modal() {
             </TopLogoBox>
             <ContentBox>
               <FirstMenuBox>
-                <LogoImg />
+                <LogoImg src="/images/Vector.png" alt="이미지" />
                 <MenuText>파트정밀가공</MenuText>
               </FirstMenuBox>
               <LogOut>로그아웃</LogOut>
@@ -105,6 +118,6 @@ export default function Modal() {
           </ModalContent>
         </ModalBox>
       )}
-    </div>
+    </>
   );
 }

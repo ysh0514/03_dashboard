@@ -30,13 +30,39 @@ const MenuIconAndLogo = styled.div`
   align-items: center;
 `;
 
-const RightLogo = styled.img`
-  display: block;
-  width: 209px;
-  height: 20px;
+const RightLogoBox = styled.div`
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 768px) {
     display: none;
   }
+`;
+
+const IconAndText = styled.div`
+  display: flex;
+`;
+
+const CompanyIcon = styled.img`
+  width: 16.7px;
+  height: 15px;
+`;
+
+const CompanyText = styled.p`
+  margin-left: 8px;
+  padding-right: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: white;
+  border-right: 2px solid white;
+`;
+
+const LogOutText = styled.p`
+  padding-left: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: white;
 `;
 
 export default function Nav() {
@@ -46,7 +72,13 @@ export default function Nav() {
         <Modal />
         <LeftLogo src="/images/LeftTopLogo.png" alt="좌측 로고" />
       </MenuIconAndLogo>
-      <RightLogo src="/images/RightTopLogo.png" alt="우측 로고" />
+      <RightLogoBox>
+        <IconAndText>
+          <CompanyIcon src="/images/whiteCompany.png" alt="로고 이미지" />
+          <CompanyText>A 가공업체</CompanyText>
+        </IconAndText>
+        <LogOutText>로그아웃</LogOutText>
+      </RightLogoBox>
     </NavBar>
   );
 }
