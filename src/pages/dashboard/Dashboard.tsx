@@ -106,6 +106,7 @@ export default function Dashboard() {
   }, [material]);
 
   useEffect(() => {
+    console.log(isClick);
     if (isClick) {
       setParams({
         ...params,
@@ -144,6 +145,10 @@ export default function Dashboard() {
     setShowMenu((curr) => !curr);
   };
 
+  const toggleClick = () => {
+    setIsClick(!isClick);
+  };
+
   return (
     <>
       <Header>
@@ -173,7 +178,7 @@ export default function Dashboard() {
             </SmallDropDown>
           </InnerFlex>
           <InnerFlex>
-            <Toggle />
+            <Toggle toggleClick={toggleClick} />
           </InnerFlex>
         </DropDownWrapper>
         {showMethod && (
