@@ -16,7 +16,6 @@ const {
   SmallDropDown,
   DropDownTitle,
   Arrow,
-  StatusText,
   CheckBoxContainer,
   CheckBoxWrapper,
   CheckBox,
@@ -169,7 +168,6 @@ export default function Dashboard() {
           </InnerFlex>
           <RightInnerFlex>
             <Toggle toggleClick={toggleClick} />
-            <StatusText>상담 중인 요청만 보기</StatusText>
           </RightInnerFlex>
         </DropDownWrapper>
         {showMethod && (
