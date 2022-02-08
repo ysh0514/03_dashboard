@@ -101,11 +101,6 @@ const Date = styled.div``;
 // const ContentContainer = styled.div`
 
 // `;
-
-// const ContentContainer = styled.div`
-
-// `;
-
 export default function Dashboard() {
   type dataType = {
     id: number;
