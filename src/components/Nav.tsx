@@ -1,5 +1,5 @@
 import Modal from './Modal';
-import NavStyle from 'assets/styles/NavStyle';
+import NavStyle from '../assets/styles/NavStyle';
 
 const {
   NavBar,

@@ -29,7 +29,8 @@ const Overlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(49, 49, 49, 0.5);
+  background: #000000;
+  opacity: 0.5;
 `;
 
 const ModalContent = styled.div`

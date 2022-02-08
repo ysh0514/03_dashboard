@@ -4,3 +4,4 @@ export const MENU = require('../../assets/images/menu.png');
 export const GRAY_ICON = require('../../assets/images/vector.png');
 export const WHITE_ICON = require('../../assets/images/vector2.png');
 export const ARROW = require('../../assets/images/arrow.png');
+export const REFRESH = require('../../assets/images/refresh.png');
