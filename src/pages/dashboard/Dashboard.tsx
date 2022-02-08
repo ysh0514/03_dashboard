@@ -5,7 +5,6 @@ import { DashboardStyle } from 'assets/styles';
 import Nav from '../../components/Nav';
 import Header from 'components/Header';
 import { NoResults } from 'components/NoResults';
-
 const { Container, Grid } = DashboardStyle;
 
 export default function Dashboard() {

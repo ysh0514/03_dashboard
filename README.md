@@ -1,90 +1,83 @@
-# 14팀 기초 세팅
-
-## 설치 방법
-### 1. 폴더의 깃 삭제하기
-
-  <img src="https://user-images.githubusercontent.com/98315458/151786608-ee7bde50-49ae-4419-a6e3-6b57decaa045.png"/>
-
-### 2. package.json의 name(이름) 바꾸어주기
+## 배포 주소
+<a href=https://dashboard-12313.herokuapp.com/>데시보드 페이지</a>
 
 
- <img src="https://user-images.githubusercontent.com/98315458/151786905-a6a8c79d-0909-401f-b223-c94dfdee9d12.png"/>
+## 💻 설치 방법
 
-### 3. package-lock.json 삭제하기
+    npm install
+    npm run dev
+    
+    
+    
 
- <img src="https://user-images.githubusercontent.com/98315458/151787035-59ae7897-b1f2-4c08-a774-5845c3fdc016.png"/>
-
-### 4. npm install , npm start로 작동하는지 테스트,세팅하기
-```
-npm install
-```
-```
-npm start
-```
-
-## 폴더 구조
-
-``` 
-src
- ┣ __test__
- ┣ assets
- ┃ ┗ images
- ┣ components
- ┃ ┣ admin
- ┃ ┣ form
- ┃ ┃ ┣ FormCheckBox.js
- ┃ ┃ ┣ FormDatePicker.js
- ┃ ┃ ┣ FormInput.js
- ┃ ┃ ┣ FormRadio.js
- ┃ ┃ ┣ FormSelect.js
- ┃ ┃ ┣ FormSelectBox.js
- ┃ ┃ ┗ FormTextArea.js
- ┃ ┗ index.js
- ┣ hooks
- ┣ pages
- ┃ ┗ admin
- ┃ ┃ ┣ components
- ┃ ┃ ┃ ┣ exposureNSalesPeriod
- ┃ ┃ ┃ ┃ ┗ ExposureNSalesPeriod.js
- ┃ ┃ ┃ ┣ productDelivery
- ┃ ┃ ┃ ┃ ┗ ProductDelivery.js
- ┃ ┃ ┃ ┣ productImg
- ┃ ┃ ┃ ┃ ┗ ProductImg.js
- ┃ ┃ ┃ ┣ productInfo
- ┃ ┃ ┃ ┃ ┗ ProductInfo.js
- ┃ ┃ ┃ ┣ productInfoNotice
- ┃ ┃ ┃ ┃ ┗ ProductInfoNotice.js
- ┃ ┃ ┃ ┣ productOption
- ┃ ┃ ┃ ┃ ┗ ProductOption.js
- ┃ ┃ ┃ ┗ index.js
- ┃ ┃ ┗ Admin.js
- ┣ services
- ┣ styles
- ┃ ┣ GlobalStyle.js
- ┃ ┣ Theme.js
- ┃ ┗ index.js
- ┣ utils
- ┃ ┗ index.js
- ┣ App.js
- ┗ index.js
- ```
+## 📂 파일 구조
+  
+src      
+ ┣ assets        
+ ┃ ┣ images        
+ ┃ ┃ ┣ arrow.png        
+ ┃ ┃ ┣ colorlogo.png            
+ ┃ ┃ ┣ index.tsx       
+ ┃ ┃ ┣ logo.png       
+ ┃ ┃ ┣ menu.png       
+ ┃ ┃ ┣ refresh.png         
+ ┃ ┃ ┣ refresh_24px.png:Zone.Identifier              
+ ┃ ┃ ┣ vector.png       
+ ┃ ┃ ┗ vector2.png        
+ ┃ ┗ styles                 
+ ┃ ┃ ┣ CardStyle.ts      
+ ┃ ┃ ┣ DashboardStyle.ts       
+ ┃ ┃ ┣ GlobalStyle.ts       
+ ┃ ┃ ┣ ModalStyle.ts       
+ ┃ ┃ ┣ NavStyle.ts        
+ ┃ ┃ ┣ Theme.ts       
+ ┃ ┃ ┣ index.ts        
+ ┃ ┃ ┗ styled.d.ts        
+ ┣ components       
+ ┃ ┣ Card.tsx       
+ ┃ ┣ Material.ts        
+ ┃ ┣ Menu.tsx     
+ ┃ ┣ Method.ts        
+ ┃ ┣ Modal.tsx        
+ ┃ ┣ Nav.tsx          
+ ┃ ┣ Toggle.tsx           
+ ┃ ┣ index.tsx       
+ ┃ ┗ type.ts        
+ ┣ hooks     
+ ┃ ┣ index.tsx      
+ ┃ ┗ useRequestApi.tsx        
+ ┣ pages        
+ ┃ ┗ dashboard        
+ ┃ ┃ ┗ Dashboard.tsx       
+ ┣ utils        
+ ┃ ┣ HttpUtil.tsx       
+ ┃ ┗ index.tsx       
+ ┣ App.tsx             
+ ┗ index.tsx      
  
- + 폴더명과 파일 이름은 바꾸어야 합니다.
-
-# 세팅
-
-## styled-component
-
-    ThemeProvider 와 GlobalStyle 을 적용한 상태입니다.
-    
-    
-    
-
-## .eslintrc 와 .prettierrc 그리고 babel.config 을 적용한 상태입니다.
+## 📋개발 진행 상황 공유
+<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
 
 
+## 📝 기능
 
+### 대시보드 페이지 HTML 구조 작업
 
-## jsconfig.json 세팅
+- 대시보드 페이지의 기본 HTML 구조 설계
+- 여섯 개의 견적 요청 카드는 컴포넌트로 분리해 각각의 카드에 해당하는 데이터를 화면에 보여줄 수 있도록 작업
 
-    jsconfig.json 파일을 통해 baseUrl : "src" 폴더로 해놓아서 절대경로를 이용하는 상태입니다.
+### 대시보드 페이지 기본 스타일 적용
+
+- 주어진 Figma 파일을 토대로 페이지의 스타일 적용
+
+### 모달 컴포넌트
+
+- UseState 를 사용하여 state 값에 따라 열리고 닫히는 모달창 구현.
+- 아이콘 클릭 시 백그라운드가 어두워지고 메뉴화면이 좌측에서 등장하도록 구현.
+- 백그라운드 클릭 시 닫히도록 구현.
+- 모달창 활성화 시 스크롤이 동작하지 않도록 구현.
+
+### 반응형 컴포넌트
+
+- Media query 를 사용하여 지정한 width 값 미만 일 때 styled-component 속성을 변경하여 반응형 구현.
+
