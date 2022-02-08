@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ARROW, REFRESH } from '../assets/images/index';
+import { GRAY_ARROW, WHITE_ARROW, REFRESH } from '../assets/images/index';
 import HeaderStyle from 'assets/styles/HeaderStyle';
 import { Method, Material, Toggle } from 'components';
 
@@ -147,16 +147,19 @@ export default function Header({ params, setParams, setShowMenu }: IProps) {
       <SubTitle>파트너님에게 딱 맞는 요청서를 찾아보세요.</SubTitle>
       <DropDownWrapper>
         <InnerFlex>
-          <BigDropDown Back={method.length > 0} onClick={methodClick}>
+          <BigDropDown Back={showMethod} onClick={methodClick}>
             <DropDownTitle>
               가공방식
               {method.length > 0 && (
                 <DropDownCount>({method.length})</DropDownCount>
               )}
             </DropDownTitle>
-            <Arrow src={ARROW} alt="드롭 다운 화살표" />
+            <Arrow
+              src={showMethod ? WHITE_ARROW : GRAY_ARROW}
+              alt="드롭 다운 화살표"
+            />
           </BigDropDown>
-          <SmallDropDown Back={material.length > 0} onClick={materialClick}>
+          <SmallDropDown Back={showMaterial} onClick={materialClick}>
             <DropDownTitle>
               재료
               {material.length > 0 && (
@@ -164,7 +167,10 @@ export default function Header({ params, setParams, setShowMenu }: IProps) {
               )}
             </DropDownTitle>
 
-            <Arrow src={ARROW} alt="드롭 다운 화살표" />
+            <Arrow
+              src={showMaterial ? WHITE_ARROW : GRAY_ARROW}
+              alt="드롭 다운 화살표"
+            />
           </SmallDropDown>
           {(material.length > 0 || method.length > 0) && (
             <FilterReset onClick={isRefreshClick}>

@@ -17,6 +17,7 @@ const LeftLogo = styled.img`
   display: block;
   width: 153px;
   height: 20px;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     width: 92px;
     height: 12px;
@@ -54,6 +55,7 @@ const CompanyText = styled.p`
   line-height: 20px;
   color: white;
   border-right: 2px solid white;
+  cursor: pointer;
 `;
 
 const LogOutText = styled.p`

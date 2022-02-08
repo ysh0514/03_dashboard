@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 const MenuIcon = styled.img`
   display: none;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     display: inline;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 15px;
     margin-right: 16px;
   }
 `;
@@ -48,10 +49,12 @@ const TopLogoImg = styled.img`
   width: 92px;
   height: 12px;
   margin: 16px 20px 11px 20px;
+  cursor: pointer;
 `;
 
 const ContentBox = styled.div`
   padding: 36px 32px;
+  cursor: pointer;
 `;
 
 const LogoImg = styled.img`
@@ -62,6 +65,7 @@ const LogoImg = styled.img`
 const FirstMenuBox = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 const MenuText = styled.p`
@@ -75,6 +79,7 @@ const LogOut = styled.div`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 const ModalStyle = {
