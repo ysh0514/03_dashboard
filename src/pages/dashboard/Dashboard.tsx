@@ -181,10 +181,12 @@ export default function Dashboard() {
 
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </SmallDropDown>
-            <FilterReset onClick={isRefreshClick}>
-              <Img src={REFRESH} />
-              필터링 리셋
-            </FilterReset>
+            {(material.length > 0 || method.length > 0) && (
+              <FilterReset onClick={isRefreshClick}>
+                <Img src={REFRESH} />
+                필터링 리셋
+              </FilterReset>
+            )}
           </InnerFlex>
           <RightInnerFlex>
             <Toggle toggleClick={toggleClick} />
