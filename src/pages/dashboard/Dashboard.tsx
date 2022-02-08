@@ -20,6 +20,7 @@ const {
   SmallDropDown,
   DropDownTitle,
   Arrow,
+  DropDownCount,
   StatusText,
   CheckBoxContainer,
   CheckBoxWrapper,
@@ -164,11 +165,22 @@ export default function Dashboard() {
         <DropDownWrapper>
           <InnerFlex>
             <BigDropDown onClick={methodClick}>
-              <DropDownTitle>가공방식</DropDownTitle>
+              <DropDownTitle>
+                가공방식
+                {method.length > 0 && (
+                  <DropDownCount>({method.length})</DropDownCount>
+                )}
+              </DropDownTitle>
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </BigDropDown>
             <SmallDropDown onClick={materialClick}>
-              <DropDownTitle>재료</DropDownTitle>
+              <DropDownTitle>
+                재료
+                {material.length > 0 && (
+                  <DropDownCount>({material.length})</DropDownCount>
+                )}
+              </DropDownTitle>
+
               <Arrow src={ARROW} alt="드롭 다운 화살표" />
             </SmallDropDown>
           </InnerFlex>

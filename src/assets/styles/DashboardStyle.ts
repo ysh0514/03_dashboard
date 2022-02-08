@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin: 0 80px;
+  padding: 40px 155px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
 const Header = styled.header`
@@ -42,8 +45,8 @@ const Bar = styled.span`
 
 const Title = styled.h1`
   font-size: 20px;
-  font-weight: 900;
   line-height: 32px;
+  font-weight: bold;
   margin-top: 40px;
 `;
 
@@ -54,6 +57,9 @@ const SubTitle = styled.h2`
 
 const DropDownWrapper = styled.form`
   display: flex;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   justify-content: space-between;
   margin: 32px 0 4px;
 `;
@@ -67,13 +73,12 @@ const BigDropDown = styled.div`
   flex-direction: row;
   align-items: center;
   margin-right: 8px;
-  padding: 4px 12px;
-  width: 98px;
-  height: 32px;
+  padding: 9px 12px;
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.grayColor};
   box-sizing: border-box;
   border-radius: 4px;
+  min-width: 98px;
   &:hover {
     border: 1px solid ${({ theme }) => theme.pointColor};
   }
@@ -84,8 +89,7 @@ const SmallDropDown = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 4px 12px;
-  width: 76px;
-  height: 32px;
+
   background: ${({ theme }) => theme.whiteColor};
   border: 1px solid ${({ theme }) => theme.grayColor};
   box-sizing: border-box;
@@ -100,12 +104,15 @@ const DropDownTitle = styled.span`
   font-family: Roboto;
   font-size: 12px;
   line-height: 14px;
-  margin-right: 12px;
 `;
+
+const DropDownCount = styled.span``;
 
 const Arrow = styled.img`
   width: 10px;
   height: 5px;
+  padding-left: 12px;
+  padding-right: 19px;
 `;
 
 const StatusText = styled.span`
@@ -139,10 +146,11 @@ const CheckBox = styled.input`
 
 const Grid = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 16px;
-  place-items: center;
+  place-content: center;
   margin: 32px 0;
 `;
 
@@ -157,6 +165,7 @@ const DashboardStyle = {
   Title,
   SubTitle,
   DropDownWrapper,
+  DropDownCount,
   InnerFlex,
   BigDropDown,
   SmallDropDown,
