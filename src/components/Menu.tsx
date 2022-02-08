@@ -1,5 +1,4 @@
 import { COLOR_LOGO, GRAY_ICON } from 'assets/images';
-import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`

@@ -16,7 +16,7 @@ class HttpUtil {
 
       // baseURL 옵션을 변경하거나 package.json 의 proxy 옵션을 넣어주면 됨.
       return axios({
-        baseURL: 'http://localhost:4000/',
+        baseURL: 'https://dashboard-12313.herokuapp.com/',
         ...body,
         params: params,
       })
