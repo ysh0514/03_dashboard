@@ -1,6 +1,6 @@
 ## 배포 주소
 
-<a href=https://dashboard-12313.herokuapp.com/>데시보드 페이지</a>
+<a href="https://gilpop8663.github.io/03_dashboard/">데시보드 페이지</a>
 
 ## 💻 설치 방법
 
@@ -58,7 +58,7 @@ src
 
 ## 📋개발 진행 상황 공유
 
-<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/80146176/153746869-353790ed-c3f4-4009-922f-3ae74242caee.png">
+<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
 
 ### 프로젝트 과정 소개
 

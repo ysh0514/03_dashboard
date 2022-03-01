@@ -16,7 +16,11 @@ export default function Dashboard() {
     status?: string;
   }>({});
 
-  const apiParams = { url: '/requests', method: 'GET', params: {} };
+  const apiParams = {
+    url: 'https://dry-hollows-03672.herokuapp.com/requests',
+    method: 'GET',
+    params: {},
+  };
   const { response, onApiRequest } = useRequestApi(apiParams);
 
   useEffect(() => {
