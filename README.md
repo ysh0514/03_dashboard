@@ -1,63 +1,60 @@
 ## 배포 주소
-<a href=https://dashboard-12313.herokuapp.com/>데시보드 페이지</a>
 
+<a href="https://gilpop8663.github.io/03_dashboard/">데시보드 페이지</a>
 
 ## 💻 설치 방법
 
     npm install
     npm run dev
-    
-    
-    
 
 ## 📂 파일 구조
-  
-src      
- ┣ assets        
- ┃ ┣ images        
- ┃ ┃ ┣ arrow.png        
- ┃ ┃ ┣ colorlogo.png            
- ┃ ┃ ┣ index.tsx       
- ┃ ┃ ┣ logo.png       
- ┃ ┃ ┣ menu.png       
- ┃ ┃ ┣ refresh.png         
- ┃ ┃ ┣ refresh_24px.png:Zone.Identifier              
- ┃ ┃ ┣ vector.png       
- ┃ ┃ ┗ vector2.png        
- ┃ ┗ styles                 
- ┃ ┃ ┣ CardStyle.ts      
- ┃ ┃ ┣ DashboardStyle.ts       
- ┃ ┃ ┣ GlobalStyle.ts       
- ┃ ┃ ┣ ModalStyle.ts       
- ┃ ┃ ┣ NavStyle.ts        
- ┃ ┃ ┣ Theme.ts       
- ┃ ┃ ┣ index.ts        
- ┃ ┃ ┗ styled.d.ts        
- ┣ components       
- ┃ ┣ Card.tsx       
- ┃ ┣ Material.ts        
- ┃ ┣ Menu.tsx     
- ┃ ┣ Method.ts        
- ┃ ┣ Modal.tsx        
- ┃ ┣ Nav.tsx          
- ┃ ┣ Toggle.tsx           
- ┃ ┣ index.tsx       
- ┃ ┗ type.ts        
- ┣ hooks     
- ┃ ┣ index.tsx      
- ┃ ┗ useRequestApi.tsx        
- ┣ pages        
- ┃ ┗ dashboard        
- ┃ ┃ ┗ Dashboard.tsx       
- ┣ utils        
- ┃ ┣ HttpUtil.tsx       
- ┃ ┗ index.tsx       
- ┣ App.tsx             
- ┗ index.tsx      
- 
-## 📋개발 진행 상황 공유
-<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
 
+src  
+ ┣ assets  
+ ┃ ┣ images  
+ ┃ ┃ ┣ arrow.png  
+ ┃ ┃ ┣ colorlogo.png  
+ ┃ ┃ ┣ index.tsx  
+ ┃ ┃ ┣ logo.png  
+ ┃ ┃ ┣ menu.png  
+ ┃ ┃ ┣ refresh.png  
+ ┃ ┃ ┣ refresh_24px.png:Zone.Identifier  
+ ┃ ┃ ┣ vector.png  
+ ┃ ┃ ┗ vector2.png  
+ ┃ ┗ styles  
+ ┃ ┃ ┣ CardStyle.ts  
+ ┃ ┃ ┣ DashboardStyle.ts  
+ ┃ ┃ ┣ GlobalStyle.ts  
+ ┃ ┃ ┣ ModalStyle.ts  
+ ┃ ┃ ┣ NavStyle.ts  
+ ┃ ┃ ┣ Theme.ts  
+ ┃ ┃ ┣ index.ts  
+ ┃ ┃ ┗ styled.d.ts  
+ ┣ components  
+ ┃ ┣ Card.tsx  
+ ┃ ┣ Material.ts  
+ ┃ ┣ Menu.tsx  
+ ┃ ┣ Method.ts  
+ ┃ ┣ Modal.tsx  
+ ┃ ┣ Nav.tsx  
+ ┃ ┣ Toggle.tsx  
+ ┃ ┣ index.tsx  
+ ┃ ┗ type.ts  
+ ┣ hooks  
+ ┃ ┣ index.tsx  
+ ┃ ┗ useRequestApi.tsx  
+ ┣ pages  
+ ┃ ┗ dashboard  
+ ┃ ┃ ┗ Dashboard.tsx  
+ ┣ utils  
+ ┃ ┣ HttpUtil.tsx  
+ ┃ ┗ index.tsx  
+ ┣ App.tsx  
+ ┗ index.tsx
+
+## 📋개발 진행 상황 공유
+
+<img width="952" alt="스크린샷 2022-02-09 오전 2 42 19" src="https://user-images.githubusercontent.com/91244500/153044840-4b2231bb-2323-4086-aad8-377874414505.png">
 
 ## 📝 기능
 
@@ -80,4 +77,3 @@ src
 ### 반응형 컴포넌트
 
 - Media query 를 사용하여 지정한 width 값 미만 일 때 styled-component 속성을 변경하여 반응형 구현.
-
