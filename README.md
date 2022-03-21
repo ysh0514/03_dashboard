@@ -104,3 +104,4 @@ src
 ### 반응형 컴포넌트
 
 - Media query 를 사용하여 지정한 width 값 미만 일 때 styled-component 속성을 변경하여 반응형 구현.
+
